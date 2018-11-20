@@ -13,7 +13,6 @@ private enum TableViewSection: Int, CaseIterable {
 }
 
 class GameOfThronesViewController: UIViewController {
-    
     //Outlets
     @IBOutlet weak var gameOfThronesTableView: UITableView!
     
@@ -27,7 +26,6 @@ class GameOfThronesViewController: UIViewController {
         GOTEpisode.allEpisodes.forEach { gameOfThronesEpisodeSections[$0.season - 1].append($0) }
     }
 }
-
 extension GameOfThronesViewController: UITableViewDataSource {
     // section methods
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -43,12 +41,14 @@ extension GameOfThronesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return gameOfThronesEpisodeSections[section].count
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        guard let cell = gameOfThronesTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? Cell else {return UITableViewCell() }
         let episode = gameOfThronesEpisodeSections[indexPath.section][indexPath.row]
-        cell.textLabel?.text = episode.name
+        cell.firstImgView.image = UIImage(named: episode.mediumImageID)
+        cell.episodeLabel.text = episode.name
+        cell.seasonNumAndEpisodeNum.text = "Season: \(episode.season) Episode: \(episode.number)"
+        
+        
         return cell
     }
-    
 }
