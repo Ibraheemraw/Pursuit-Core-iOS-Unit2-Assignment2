@@ -10,21 +10,35 @@ import UIKit
 
 class GuideViewController: UIViewController {
 
+    @IBOutlet weak var secondImgView: UIImageView!
+    @IBOutlet weak var guideTitleVIew: UILabel!
+    @IBOutlet weak var seasonView: UILabel!
+    
+    @IBOutlet weak var episodeVIew: UILabel!
+    @IBOutlet weak var runTimeVIew: UILabel!
+    @IBOutlet weak var airDateView: UILabel!
+    
+    @IBOutlet weak var guideDialogueVIew: UITextView!
+   
+    
+//    private var myGOTList: [[GOTEpisode]]
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+    }
+    
+    
+    private func secondViewSetUp(){
+//        let guideForGOT = myGOTList[][]
+//        secondImgView.image = UIImage(named:  )
+        
+        
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

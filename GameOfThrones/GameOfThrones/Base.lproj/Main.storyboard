@@ -172,6 +172,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3AD-8N-owY"/>
                     </view>
+                    <connections>
+                        <outlet property="airDateView" destination="9MP-ZP-7K4" id="UeO-LD-b15"/>
+                        <outlet property="episodeVIew" destination="h2t-t5-D1W" id="cWb-BI-8W3"/>
+                        <outlet property="guideDialogueVIew" destination="uMC-6m-btx" id="Ycn-Iu-cgL"/>
+                        <outlet property="guideTitleVIew" destination="z3U-Oj-lq2" id="gve-J0-wVT"/>
+                        <outlet property="runTimeVIew" destination="y42-eL-AXa" id="N07-hO-3Kh"/>
+                        <outlet property="seasonView" destination="GsT-pH-gF3" id="rjT-M0-XXv"/>
+                        <outlet property="secondImgView" destination="J7J-o7-ajZ" id="RBm-MD-isr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fNV-aW-uXf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
